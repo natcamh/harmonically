@@ -1,7 +1,7 @@
-// src/pages/HomePage.jsx
 import React from 'react';
 import useApi from '../hooks/useApi';
 import { ENDPOINTS } from '../config/ApiEndpoints';
+import { Link } from 'react-router-dom';
 import SongList from '../components/songList';
 import PlaylistList from '../components/playlistList';
 import AlbumList from '../components/albumList';
@@ -25,6 +25,12 @@ const HomePage = () => {
 
   return (
     <div>
+      <nav style={{ marginBottom: '20px' }}>
+  <ul style={{ listStyleType: 'none', padding: 0 }}>
+    <li style={{ display: 'inline', marginRight: '10px' }}><Link to="/login">Login</Link></li>
+    <li style={{ display: 'inline' }}><Link to="/profile">Profile</Link></li>
+  </ul>
+</nav>
       <h1>Home Page</h1>
       <SongList songs={songs} />
       <PlaylistList playlists={playlists} />
