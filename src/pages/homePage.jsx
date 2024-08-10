@@ -1,12 +1,11 @@
 import React from 'react';
-import useApi from '../hooks/useApi';
-import { ENDPOINTS } from '../config/ApiEndpoints';
+import useApi from './hooks/useApi';
 import { Link } from 'react-router-dom';
-import SongList from '../components/songList';
-import PlaylistList from '../components/playlistList';
-import AlbumList from '../components/albumList';
-import ArtistList from '../components/artistList';
-import GenreList from '../components/genreList';
+import SongList from './components/songList';
+import PlaylistList from './components/playlistList';
+import AlbumList from './components/albumList';
+import ArtistList from './components/artistList';
+import GenreList from './components/genreList';
 
 const HomePage = () => {
   const { data: songs, loading: loadingSongs, error: errorSongs } = useApi(ENDPOINTS.songs);

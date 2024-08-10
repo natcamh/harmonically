@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { ENDPOINTS } from '../config/ApiEndpoints';
 
 const useApi = (endpoint) => {
   const [data, setData] = useState([]);

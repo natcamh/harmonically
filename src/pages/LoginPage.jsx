@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuth } from '../contexts/authContext';
+import { useAuth } from './contexts/authContext';
 import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
@@ -10,9 +10,9 @@ const LoginPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Aquí deberías hacer la validación de las credenciales y, si es válido:
+    //credenciales
     login({ username });
-    navigate('/profile'); // Redirige a la página de perfil después de iniciar sesión
+    navigate('/profile'); 
   };
 
   return (

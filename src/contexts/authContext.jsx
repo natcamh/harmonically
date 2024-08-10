@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
         setUser(null);
     };
 
-    const isAuthenticated = !!user; // Determina si el usuario está autenticado
+    const isAuthenticated = !!user; 
 
     return (
         <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>
