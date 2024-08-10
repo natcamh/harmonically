@@ -1,13 +1,13 @@
 import React from 'react';
-import useApi from '../hooks/useApi';
 import { Link } from 'react-router-dom';
-import SongList from '../components/songList';
-import PlaylistList from '../components/playlistList';
-import AlbumList from '../components/albumList';
-import ArtistList from '../components/artistList';
-import GenreList from '../components/genreList';
+import SongList from './SongList';
+import PlaylistList from './PlaylistList';
+import AlbumList from './AlbumList';
+import ArtistList from './ArtistList';
+import GenreList from './GenreList';
+import useApi from '../hooks/useApi';
 
-const HomePage = () => {
+const Home = () => {
   const { data: songs, loading: loadingSongs, error: errorSongs } = useApi(/songs/);
   const { data: playlists, loading: loadingPlaylists, error: errorPlaylists } = useApi(/playlists/);
   const { data: albums, loading: loadingAlbums, error: errorAlbums } = useApi(/albums/);
@@ -30,7 +30,7 @@ const HomePage = () => {
     <li style={{ display: 'inline' }}><Link to="/profile">Profile</Link></li>
   </ul>
 </nav>
-      <h1>Home Page</h1>
+      <h1>Home</h1>
       <SongList songs={songs} />
       <PlaylistList playlists={playlists} />
       <AlbumList albums={albums} />
@@ -40,4 +40,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;
